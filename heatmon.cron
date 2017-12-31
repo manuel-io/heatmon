@@ -1,0 +1,3 @@
+CMD=/usr/lib/heatmon/heatmon.rb
+
+* * * * * root $CMD

@@ -1,0 +1,14 @@
+Source: heatmon
+Section: monitoring, debug, system
+Priority: optional
+Maintainer: Manuel Bieling <manuel.bieling@posteo.de>
+Build-Depends: ruby, debhelper (>= 9)
+Standards-Version: 3.9.8
+Homepage: https://github.com/manuel-io/heatmon
+#Vcs-Git: https://anonscm.debian.org/collab-maint/heatmon.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/heatmon.git
+
+Package: heatmon
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ruby, cpufrequtils
+Description: Monitor the CPU temperature heat and use this tool to react accordingly.
