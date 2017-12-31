@@ -1,12 +1,12 @@
 Source: heatmon
-Section: monitoring, debug, system
+Section: admin
 Priority: optional
-Maintainer: Manuel Bieling <manuel.bieling@posteo.de>
+Maintainer: Manuel <manuel-io@posteo.org>
 Build-Depends: ruby, debhelper (>= 9)
 Standards-Version: 3.9.8
 Homepage: https://github.com/manuel-io/heatmon
-#Vcs-Git: https://anonscm.debian.org/collab-maint/heatmon.git
-#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/heatmon.git
+Vcs-Git: https://github.com/manuel-io/heatmon.git
+Vcs-Browser: https://github.com/manuel-io/heatmon
 
 Package: heatmon
 Architecture: any

@@ -1,3 +1,9 @@
+heatmon (0.0.3-1) unstable; urgency=medium
+
+  * Configuration
+
+ -- Manuel Bieling <manuel.bieling@posteo.de>  Sun, 31 Dec 2017 23:30:00 +0100
+
 heatmon (0.0.2-1) unstable; urgency=medium
 
   * Quick fix
