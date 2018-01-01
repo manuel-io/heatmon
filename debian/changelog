@@ -1,3 +1,15 @@
+heatmon (0.0.4-1) unstable; urgency=medium
+
+  * /usr/bin/notify-send
+
+ -- Manuel Bieling <manuel.bieling@posteo.de>  Sun, 31 Dec 2017 23:30:00 +0100
+
+heatmon (0.0.3-2) unstable; urgency=medium
+
+  * Quick fix
+
+ -- Manuel Bieling <manuel.bieling@posteo.de>  Sun, 31 Dec 2017 23:30:00 +0100
+
 heatmon (0.0.3-1) unstable; urgency=medium
 
   * Configuration

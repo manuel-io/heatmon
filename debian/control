@@ -10,5 +10,5 @@ Vcs-Browser: https://github.com/manuel-io/heatmon
 
 Package: heatmon
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, ruby, cpufrequtils
+Depends: ${shlibs:Depends}, ${misc:Depends}, ruby, cpufrequtils, libnotify-bin
 Description: Monitor the CPU temperature heat and use this tool to react accordingly.

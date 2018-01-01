@@ -17,6 +17,8 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
 # 02110-1301, USA.
 
+require 'etc'
+
 Threshold = 80
 
 module Logfile
@@ -70,14 +72,29 @@ class Temperature
               /sys/class/hwmon/hwmon2/device/temp1_input
             |
 
+  attr_reader :current
+
   def initialize
     @file = Files.first
+    @current = File.read(@file).to_i / 1000
+    notification
   end
 
-  def current
-    @content = File.read(@file).to_i
-    @content / 1000
+  private
+
+  def notification
+    Etc.passwd do |user|
+      if %w|/bin/bash /usr/bin/zsh|.include? user.shell
+        if @current <= 80 and @current % 10 == 0
+          `su #{user.name} -c "/usr/bin/notify-send 'Temperature' '#{current} °C' --icon=dialog-information"`
+        end
+        if @current > 80
+          `su #{user.name} -c "/usr/bin/notify-send 'Temperature' '#{current} °C' --icon=dialog-warning"`
+        end
+      end
+   end
   end
+
 end
 
 class CPU
@@ -85,7 +102,7 @@ class CPU
   include Logfile
   include Sysfiles
 
-  Temp = Temperature.new
+  @@temp = Temperature.new
 
   def self.temperature
     Temp.current
@@ -98,7 +115,7 @@ class CPU
     @frequencies = read(@@frequencies[core]).split(/ /)
     @speed = read @@speed[core]
     @governor = read @@governor[core]
-    @temperature = self.class.temperature
+    @temperature = @@temp.current
 
     if @temperature > max
       decrease.call self
