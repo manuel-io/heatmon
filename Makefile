@@ -9,3 +9,10 @@ install:
 	install -m 644 heatmon.cron $(DESTDIR)/etc/cron.d/heatmon
 	install -m 644 heatmon.logrotate $(DESTDIR)/etc/logrotate.d/heatmon
 	install -m 644 /dev/null $(DESTDIR)/var/log/heatmon.log
+
+clean:
+	rm -f debian/debhelper-build-stamp
+	rm -f debian/files
+	rm -f debian/heatmon.debhelper.log
+	rm -f debian/heatmon.substvars
+	rm -rf debian/heatmon/

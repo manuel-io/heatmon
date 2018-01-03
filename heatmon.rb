@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 
-# Copyright (C) 2017 Manuel Bieling
+# Copyright (C) 2017 Manuel <manuel-io@posteo.org>
 
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -32,7 +32,7 @@ module Logfile
 
   def log(str)
     File.open Path, 'a' do |fd|
-      fd.write Time.new.strftime("%a %m, %T, ")
+      fd.write Time.new.strftime("%a %d, %T, ")
       fd.write `hostname`.strip + ": "
       fd.write str + "\n"
     end

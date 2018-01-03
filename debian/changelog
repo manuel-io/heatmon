@@ -1,3 +1,21 @@
+heatmon (0.0.4-4) unstable; urgency=medium
+
+  * postint: cron
+
+ -- Manuel Bieling <manuel.bieling@posteo.de>  Mon, 04 Jan 2018 23:30:00 +0100
+
+heatmon (0.0.4-3) unstable; urgency=medium
+
+  * postint: cron
+
+ -- Manuel Bieling <manuel.bieling@posteo.de>  Sun, 31 Dec 2017 23:30:00 +0100
+
+heatmon (0.0.4-2) unstable; urgency=medium
+
+  * Quick fix
+
+ -- Manuel Bieling <manuel.bieling@posteo.de>  Sun, 31 Dec 2017 23:30:00 +0100
+
 heatmon (0.0.4-1) unstable; urgency=medium
 
   * /usr/bin/notify-send
